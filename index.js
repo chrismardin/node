@@ -10,6 +10,8 @@ app.use(express.json())
 app.use("/api/v1", bancosV1)
 app.use("/api/v2", bancosV2)
 
-app.listen(3000, ()=>{
- console.log("Servidor en http://localhost:3000")
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, ()=>{
+ console.log(`Servidor corriendo en puerto ${PORT}`)
 })
