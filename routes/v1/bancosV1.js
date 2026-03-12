@@ -4,7 +4,7 @@ import fs from "fs"
 const router = express.Router()
 
 const data = fs.readFileSync("lista.json", "utf8")
-const bancos = JSON.parse(data) +
+const bancos = JSON.parse(data) 
     
 
 
@@ -151,6 +151,7 @@ router.delete("/bancos/:id/personas/:idPersona", (req, res) => {
  res.json({ mensaje: "Persona eliminada" })
 
 })
+
 
 
 export default router
